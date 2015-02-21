@@ -4,7 +4,10 @@ NorthwindApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'odata#index'
-
+  resources :odata
+  get 'supplier', :to => 'odata#supplier'
+  get 'orders', :to => 'odata#orders'
+  get 'contacts', :to => 'odata#contacts'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

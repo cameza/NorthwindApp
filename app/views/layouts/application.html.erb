@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div id="navig" class="container-fluid">
+    <ul class="nav nav-pills">
+    <div class="col-xs-4 slogan">
+      	<%= link_to 'NorthWind App', root_path %>
+    </div>
+    	<li role="presentation"><%= link_to 'Find Supplier', supplier_path %></li>
+    	<li role="presentation"><%= link_to 'List Orders', orders_path %></li>
+    	<li role="presentation"><%= link_to 'Contact Names', contacts_path %></li>
+    </ul>
+  </div>
+</nav>
+<hr />
+<br class="clear" />
 
 <%= yield %>
 
