@@ -72,11 +72,13 @@ class OdataController < ApplicationController
 			if item["ProductID"].to_i == productID.to_i
 				totalPrice = item["UnitPrice"].to_i*item["Quantity"].to_i*(1-item["Discount"].to_i)
 				count += 1
-				order = {item["OrderID"] => totalPrice} 
+				order[item["OrderID"].to_s] = totalPrice 
+				puts order
 			end
 		end
 		@output["count"] = count
 		@output["order"] = order
+		puts @output
 		# Activate the flag when a product ID is received			
 		if productID != nil
 			@received = true
