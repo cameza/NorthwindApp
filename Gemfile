@@ -37,6 +37,9 @@ gem 'bootstrap-sass', '~> 3.3.3'
 # Add autoprefixer
 gem 'autoprefixer-rails'
 
+# Add the simple form
+gem 'bootstrap_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

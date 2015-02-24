@@ -5,6 +5,9 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"%>
+  <%= javascript_include_tag "http://code.jquery.com/jquery-1.8.2.min.js" %>
+  <%= javascript_include_tag "http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js" %> 
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -21,8 +24,10 @@
 </nav>
 <hr />
 <br class="clear" />
+<div id="myBody" class="container">
+	<%= yield %>
+</div>
 
-<%= yield %>
 
 </body>
 </html>

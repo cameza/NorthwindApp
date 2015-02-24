@@ -1,13 +1,19 @@
 NorthwindApp::Application.routes.draw do
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'odata#index'
   resources :odata
-  get 'supplier', :to => 'odata#supplier'
+  get '/supplier', :to => 'odata#supplier'
+  post '/supplier', :to => 'odata#supplier'
   get 'orders', :to => 'odata#orders'
+  post 'orders', :to => 'odata#orders'
   get 'contacts', :to => 'odata#contacts'
+  post 'contacts', :to => 'odata#contacts'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

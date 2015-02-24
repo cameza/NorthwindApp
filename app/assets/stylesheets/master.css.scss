@@ -1,4 +1,4 @@
-body { padding-top: 70px; }
+body { padding-top: 200px; }
 hr {
 	clear: both;
 }
@@ -6,9 +6,8 @@ hr {
 	clear: both;
 }
 .navbar {
-	height: 90px;
+	height: 70px;
 }
-
 .slogan {
 	font-size: 20px;
 	display: inline-block;
@@ -40,7 +39,16 @@ hr {
 	margin-bottom: 0px;
 	margin-left: 0px;
 	margin-right: -15px;
-	margin-top: 25px;
+	margin-top: 15px;
 	padding-left: 0px;
 }
-
+#myBody {
+	padding-top: 70px;
+}
+#description p {
+	font-size: 16px;
+}
+#jumbo .jumbotron {
+	background-color: darken(#428bca, 6.5%);
+	color: white;
+}

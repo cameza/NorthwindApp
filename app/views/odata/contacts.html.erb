@@ -1,3 +1,26 @@
-<div class="col-xs-10 col-xs-offset-1">
-  <h1>contacts</h1>
+<div class="col-md-5 col-xs-12">
+  <div class="container">
+  	<h1>Contact Names</h1>
+  	<%= bootstrap_form_tag :action => 'orders' do |f| %>
+		<%= f.search_field :productID, hide_label: true, placeholder: 'Type the Product ID' %>
+		<%= f.submit "Search" %>
+		<div class="jumbotron">
+			<h2><%= result = "Product Summary:" if @received %></h2>
+			<p><%= result = "Product ID = #{@output['productID']}" if @received %></p>
+			<p><%= result = "The number of orders for product ID #{@output['productID']} is #{@output['count']}" if @received %></p>
+			<table class="table table-hover">
+				<tr>
+					<th><%= result = "Contact Name" if @received %></th>
+				</tr>
+				<% 	@output["names"].each { |contact|
+						idCell = contact 
+				%>
+				<tr>
+					<td><%= idCell %></td>	
+				</tr>
+				<% } %>
+			</table>
+		</div>
+  	<% end %>
+  </div>
 </div>

@@ -1,3 +1,19 @@
-<div class="col-xs-10 col-xs-offset-1">
-  <h1>supplier</h1>
+<div class="col-md-5 col-xs-12">
+  <div class="container">
+  	<h1>Find the supplier</h1>
+  	<%= bootstrap_form_tag :action => 'supplier' do |f| %>
+		<%= f.search_field :productID, hide_label: true, placeholder: 'Type the Product ID' %>
+		<%= f.submit "Search" %>
+		<div class="jumbotron">
+			<h2><%= result = "Product Summary:" if @received %></h2>
+			<p><%= result = "Product ID = #{@productID}" if @received %></p>
+			<p><%= result = "Product name = #{@output['productName']}" if @received %></p>
+			<p><%= result = "Supplier ID = #{@output['supplierID']}" if @received %></p>
+			<p><%= result = "#{@output['productName']} is a #{@output['active']} product" if @received %></p>
+			<br></br>
+			<h2><%= result = "Supplier name" if @received %></h2>
+			<p><%= result = "#{@output['companyName']}" if @received %></p>
+		</div>
+  	<% end %>
+  </div>
 </div>
